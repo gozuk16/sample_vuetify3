@@ -21,16 +21,24 @@
       <v-main>
         <Sample />
       </v-main>
+        <BatchExecutionTimeChart />
+        <MermaidChart />
     </v-app>
 
 </template>
 
 <script setup>
 import Sample from './components/Sample.vue'
+import BatchExecutionTimeChart from './components/BatchExecutionTimeChart.vue'
+import MermaidChart from './components/MermaidChart.vue'
 </script>
 
 <script>
   export default {
+    components: {
+      BatchExecutionTimeChart,
+      MermaidChart,
+    },
     data: () => ({
       items: [
         { title: 'Menu1' },
