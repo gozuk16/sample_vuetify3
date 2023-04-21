@@ -23,6 +23,8 @@
       </v-main>
         <BatchExecutionTimeChart />
         <MermaidChart />
+        <GanttChartD3 />
+        <Ganttastic />
     </v-app>
 
 </template>
@@ -31,6 +33,8 @@
 import Sample from './components/Sample.vue'
 import BatchExecutionTimeChart from './components/BatchExecutionTimeChart.vue'
 import MermaidChart from './components/MermaidChart.vue'
+import GanttChartD3 from './components/GanttChartD3.vue'
+import Ganttastic from './components/Ganttastic.vue'
 </script>
 
 <script>
@@ -38,6 +42,8 @@ import MermaidChart from './components/MermaidChart.vue'
     components: {
       BatchExecutionTimeChart,
       MermaidChart,
+      GanttChartD3,
+      Ganttastic,
     },
     data: () => ({
       items: [
