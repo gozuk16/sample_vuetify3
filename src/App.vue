@@ -25,6 +25,7 @@
         <MermaidChart />
         <GanttChartD3 />
         <Ganttastic />
+        <ApexCharts />
     </v-app>
 
 </template>
@@ -35,6 +36,7 @@ import BatchExecutionTimeChart from './components/BatchExecutionTimeChart.vue'
 import MermaidChart from './components/MermaidChart.vue'
 import GanttChartD3 from './components/GanttChartD3.vue'
 import Ganttastic from './components/Ganttastic.vue'
+import ApexCharts from './components/ApexCharts.vue'
 </script>
 
 <script>
@@ -44,6 +46,7 @@ import Ganttastic from './components/Ganttastic.vue'
       MermaidChart,
       GanttChartD3,
       Ganttastic,
+      ApexCharts,
     },
     data: () => ({
       items: [
