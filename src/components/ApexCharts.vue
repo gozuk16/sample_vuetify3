@@ -1,7 +1,12 @@
 <script setup>
+import { onMounted, reactive } from 'vue';
 import VueApexCharts from "vue3-apexcharts";
-const apexchart = VueApexCharts;
 
+const apexchart = VueApexCharts;
+const chartData = reactive({
+	series: null,
+});
+/*
 const series = [
   {
     data: [
@@ -50,6 +55,12 @@ const series = [
     ]
   }
 ];
+*/
+
+onMounted(async () => {
+	const resp = await fetch('/data.json');
+	chartData.series = await resp.json();
+});
 
 const currentTime = new Date().getTime();
 const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
@@ -163,7 +174,7 @@ const chartOptions = {
 
 <template>
   <div id="app">
-    <apexchart type="rangeBar" height="250" :options="chartOptions" :series="series"></apexchart>
+    <apexchart type="rangeBar" height="250" v-if="chartData.series" :options="chartOptions" :series="chartData.series"></apexchart>
   </div>
 </template>
 
